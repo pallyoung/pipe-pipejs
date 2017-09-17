@@ -1,0 +1,31 @@
+{
+  "name": "pipexjs",
+  "version": "1.0.0",
+  "description": "pipe to pipe",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "gulp test",
+    "release":"gulp release",
+    "publish":"gulp release && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pallyoung/pipe-pipejs.git"
+  },
+  "keywords": [
+    "pipe",
+    "async",
+    "js"
+  ],
+  "author": "Spencer Ye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pallyoung/pipe-pipejs/issues"
+  },
+  "homepage": "https://github.com/pallyoung/pipe-pipejs#readme"
+}
