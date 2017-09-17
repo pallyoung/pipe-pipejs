@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="pipejs.js"></script>
+</head>
+<body>
+    <script>
+        var pipe1 = new Pipe(function(source,next,abort){
+            console.log('pipe1 source:',source);
+            next();
+        })
+        var pipe2 = new Pipe(function(source,next,abort){
+            console.log('pipe2 source:',source);
+            next();
+        })
+        var pipe3 = new Pipe(function(source,next,abort){
+            console.log('pipe3 source:',source);
+            next();
+        })
+        pipe1.before(pipe2);
+        pipe1.after(pipe3);
+        pipe1.source(33);
+    </script>
+</body>
+</html>
