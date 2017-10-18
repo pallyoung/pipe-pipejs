@@ -1,6 +1,6 @@
 {
   "name": "pipexjs",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "pipe to pipe",
   "main": "index.js",
   "directories": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pallyoung/pipe-pipejs.git"
+    "url": "git+https://github.com/pallyoung/pipexjs.git"
   },
   "keywords": [
     "pipe",
@@ -25,7 +25,7 @@
   "author": "Spencer Ye",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pallyoung/pipe-pipejs/issues"
+    "url": "https://github.com/pallyoung/pipexjs/issues"
   },
-  "homepage": "https://github.com/pallyoung/pipe-pipejs#readme"
+  "homepage": "https://github.com/pallyoung/pipexjs#readme"
 }

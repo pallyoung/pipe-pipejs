@@ -45,12 +45,7 @@
     Pipe.prototype = {
         constructor: Pipe,
         source: function (source) {
-            if (this._root.status === IDLE) {
-                next(this._root.root, source);
-            } else {
-                throw new Error();
-            }
-
+            next(this._root.root, source);
         },
         remove: function () {
             this._root = {
