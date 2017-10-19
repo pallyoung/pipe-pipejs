@@ -9,21 +9,42 @@
 </head>
 <body>
     <script>
+        var handler1 = function(source,next,abort){
+            console.log('handler 1:',source);
+            next();
+        }
+        var handler2 = function(source,next,abort){
+            console.log('handler 2:',source);
+            next();
+        }
+        var handler3 = function(source,next,abort){
+            console.log('handler 3:',source);
+            next();
+        }
+        
         var pipe1 = new Pipe(function(source,next,abort){
-            console.log('pipe1 source:',source);
+            console.log('pipe1 first source:',source);
+            next();
+        },function(source,next,abort){
+            console.log('pipe1 end source:',source);
+            next();
+        });
+        pipe1.unshift(function(source,next,abort){
+            console.log('pipe1 2 source:',source);
             next();
         })
-        var pipe2 = new Pipe(function(source,next,abort){
-            console.log('pipe2 source:',source);
+        pipe1.append(function(source,next,abort){
+            console.log('pipe1 3 source:',source);
             next();
         })
-        var pipe3 = new Pipe(function(source,next,abort){
-            console.log('pipe3 source:',source);
-            next();
-        })
-        pipe1.before(pipe2);
-        pipe1.after(pipe3);
-        pipe1.source(33);
+        pipe1.append(handler1);
+        pipe1.insertBefore(handler2,handler1);
+        pipe1.insertAfter(handler3,handler1);
+        pipe1.source(1)
+        pipe1.remove(handler1);
+        pipe1.source(2)
+        var pipe2 = new Pipe()
+        pipe2.source(3)
     </script>
 </body>
 </html>
