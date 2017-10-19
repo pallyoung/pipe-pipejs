@@ -1,6 +1,6 @@
 {
   "name": "pipexjs",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "pipe to pipe",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
   "scripts": {
     "test": "gulp test",
     "release":"gulp release",
-    "publish":"gulp release && npm publish"
+    "publishPack":"gulp release && npm publish"
   },
   "repository": {
     "type": "git",
